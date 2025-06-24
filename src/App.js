@@ -17,12 +17,16 @@ export default function App() {
     const container = useRef()
 
     React.useEffect(()=>{
-        VanillaTilt.init(document.querySelectorAll('.tilt'), {
+        const isMdScreen = window.innerWidth >= 768;
+
+        if (isMdScreen) {
+        VanillaTilt.init(document.querySelectorAll(".tilt"), {
             max: 15,
             speed: 200,
             glare: true,
-            "max-glare": 0.7, 
-        })
+            "max-glare": 0.7,
+        });
+        }
     }, [])
 
     const moveTop  = ()=>{
@@ -129,7 +133,7 @@ export default function App() {
                 <div className='grid grid-cols-3 md:grid-cols-3 w-full'>
                 {
                     Skills.map(skill=>(
-                        <div className='md:p-3 flex flex-col rounded-3xl text-white md:tilt gap-3 m-4 w-auto items-center justify-center' key={skill}>
+                        <div className='md:p-3 flex flex-col rounded-3xl text-white tilt gap-3 m-4 w-auto items-center justify-center' key={skill}>
                             <i class={`${skill.value} text-white text-3xl md:text-4xl`}></i>
                             <div className='text-xs md:text-2xl'>{skill.name}</div>
                         </div> 
@@ -226,7 +230,7 @@ export default function App() {
                             <a
                                 href={platform.link}
                                 target="_blank"
-                                className="flex flex-col gap-4 justify-center items-center p-5 rounded-3xl md:tilt text-md"
+                                className="flex flex-col gap-4 justify-center items-center p-5 rounded-3xl tilt text-md"
                                 key={platform.name}
                             >
                                 {platform.icon}
@@ -239,11 +243,11 @@ export default function App() {
                 <div className='flex flex-col justify-center items-center gap-5'>
                     <div className='text-2xl md:text-[4rem] font-bold md:mb-10'>My Socials</div>
                     <div className='flex justify-center items-center gap-5 text-xl select-none'>
-                        <a href='https://www.linkedin.com/in/abhi-vardhan09/' target='_blank' className='flex flex-col gap-4 justify-center items-center p-5 rounded-3xl md:tilt'>
+                        <a href='https://www.linkedin.com/in/abhi-vardhan09/' target='_blank' className='flex flex-col gap-4 justify-center items-center p-5 rounded-3xl tilt'>
                             <i class="devicon-linkedin-plain text-[3rem] md:text-[4.5rem]"></i>
                             <div className='text-xl'>LinkedIn</div>
                         </a>
-                        <a href='https://github.com/AbhiVardhan020' target='_blank' className='flex flex-col gap-4 text-xl justify-center items-center p-5 rounded-3xl md:tilt'>
+                        <a href='https://github.com/AbhiVardhan020' target='_blank' className='flex flex-col gap-4 text-xl justify-center items-center p-5 rounded-3xl tilt'>
                             <i class="devicon-github-original text-[3rem] md:text-[4.5rem]"></i>
                             <div className='text-xl'>GitHub</div>
                         </a>
