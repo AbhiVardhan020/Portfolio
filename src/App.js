@@ -68,6 +68,7 @@ export default function App() {
                 <path d="M30 0H0V30C0 13.431 13.431 0 30 0Z" fill="black" transform="rotate(90 15 15)"/>
             </svg>
 
+            {/* Logo and name section */}
             <div className='fixed w-full md:w-auto top-[1.4rem] left-[1.4rem] md:left-[3rem] bg-black rounded-br-[2rem] pt-2 md:pt-0 pe-5 pb-5 z-10 flex gap-3 select-none cursor-pointer' onClick={moveTop}>
                 <img src='/images/Logo.png' className='w-[3rem] h-[3rem] md:w-[5rem] md:h-[5rem] object-contain' />
                 <div className='flex flex-col justify-center'>
@@ -76,7 +77,7 @@ export default function App() {
                 </div>
             </div>
 
-
+            {/* Hero section */}
             <div className='h-[94vh] w-full rounded-3xl overflow-hidden z-0 relative mt-4 md:mt-0' id='#'>
                 <Silk
                     speed={5}
@@ -120,6 +121,7 @@ export default function App() {
             </div>
 
 
+            {/* About me section */}
             <div className='min-h-[94vh] my-12 rounded-3xl w-full md:w-[70vw] mx-auto flex flex-col md:flex-row justify-center items-center gap-8 p-8'>
                 <img src='/images/Me.jpg' className='w-60 md:w-1/3 rounded-2xl shadow-lg' />
                 <div className='flex-1 text-left leading-relaxed blurText'>
@@ -128,6 +130,7 @@ export default function App() {
             </div>
 
 
+            {/* Skills section */}
             <div className='md:min-h-[94vh] py-[5rem] my-[3rem] bg-neutral-900 rounded-3xl flex flex-col justify-center items-center md:px-[10rem]'>
                 <div className='text-white font-bold text-2xl md:text-[4rem] mb-8'>What am I good at ?</div>
                 <div className='grid grid-cols-3 md:grid-cols-3 w-full'>
@@ -139,10 +142,11 @@ export default function App() {
                         </div> 
                     ))
                 }
-
                 </div>
             </div>
 
+
+            {/* Skills */}
             <div className='h-[50vh] md:min-h-[94vh] text-white my-[3rem] gap-5 rounded-3xl flex flex-col justify-center items-center'>
                 <div className='text-xl md:text-[6rem] font-bold flex items-center animateScroll'>
                     Web 
@@ -177,8 +181,9 @@ export default function App() {
                 </div>
             </div>
 
-            <div className='min-h-[97vh] px-5 py-10 my-[3rem] bg-neutral-900 text-white rounded-3xl flex flex-col justify-center items-center w-100'>
-                <div className='text-2xl md:text-[4rem] font-bold md:mb-5'>My Projects</div>
+            {/* Works section */}
+            <div className='min-h-[94vh] px-5 py-10 my-[3rem] bg-neutral-900 text-white rounded-3xl flex flex-col justify-center items-center w-100'>
+                <div className='text-2xl md:text-[4rem] font-bold md:mb-5'>My Works</div>
                 <div className="w-full flex flex-wrap justify-center gap-8 py-8">
                     {projects.map((project) => (
                     <div
@@ -211,9 +216,10 @@ export default function App() {
                     </div>
                     ))}
                 </div>
-
             </div>
 
+            
+            {/* Quote */}
             <div className="md:h-[94vh] flex flex-col items-center select-none justify-center rounded-3xl bg-slate-400 p-8 gap-8 my-auto">
                 <img src="/images/CC2.png" className="h-[30vh] md:h-[60vh] w-auto max-w-sm object-contain" alt="Laughter" />
                 <div className="text-2xl md:text-5xl font-bold text-black text-center md:text-left w-auto">
@@ -221,6 +227,8 @@ export default function App() {
                 </div>
             </div>
 
+
+            {/* Coding and social */}
             <div className='h-[80vh] md:h-screen text-white flex flex-col justify-center items-center gap-10'>
                 <div className='flex flex-col items-center gap-5'>
                     <div className='text-2xl md:text-[4rem] font-bold md:mb-9'>My Coding Profiles</div>
@@ -255,6 +263,8 @@ export default function App() {
                 </div>
             </div>
 
+
+            {/* Footer and CTA */}
             <div className="h-[94vh] md:h-[93vh] rounded-3xl overflow-hidden relative mb-2">
                 <Iridescence
                     color={[0.6, 0.4, 0.4]}
