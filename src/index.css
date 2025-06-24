@@ -1,13 +1,62 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background-color: black;
+    font-family: 'Outfit', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.animateScroll{
+    animation: animate 2s ease forwards;
+    animation-timeline: view(); 
+    animation-range: cover 10% cover 20%; 
+    animation-fill-mode: both; 
+} 
+
+
+/* Works for Webkit browsers like Chrome, Edge */
+::-webkit-scrollbar {
+  width: 10px;
+  /* display: none; */
 }
+
+::-webkit-scrollbar-track {
+  background: black; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5a5a5a; /* Indigo Tailwind color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a90;
+}
+
+
+@keyframes animate {
+    0%{
+        opacity: 0.5;
+        scale: 0.9;
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes blurText {
+    0%{
+        opacity: 0.5;
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+
