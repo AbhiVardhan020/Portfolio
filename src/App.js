@@ -125,7 +125,7 @@ export default function App() {
             <div className='min-h-[94vh] my-12 rounded-3xl w-full md:w-[70vw] mx-auto flex flex-col md:flex-row justify-center items-center gap-8 p-8'>
                 <img src='/images/Me.jpg' className='w-60 md:w-1/3 rounded-2xl shadow-lg' />
                 <div className='flex-1 text-left leading-relaxed blurText'>
-                    <ShinyText text="I'm ABHI VARDHAN, a MERN stack developer passionate about building real-world solutions. I enjoy solving problems, exploring design, and constantly learning new tech." disabled={false} speed={3} className='custom-class text-xl md:text-5xl' />
+                    <ShinyText text="I'm Abhi Vardhan, a MERN stack developer passionate about building real-world solutions. I enjoy solving problems, exploring design, and constantly learning new tech." disabled={false} speed={3} className='custom-class text-xl md:text-5xl' />
                 </div>
             </div>
 
