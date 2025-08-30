@@ -231,7 +231,7 @@ export default function App() {
             {/* Coding and social */}
             <div className='h-[80vh] md:h-screen text-white flex flex-col justify-center items-center gap-10'>
                 <div className='flex flex-col items-center gap-5'>
-                    <div className='text-2xl md:text-[4rem] font-bold md:mb-9'>My Coding Profiles</div>
+                    <div className='text-2xl md:text-[4rem] font-bold md:mb-9 '>My Coding Profiles</div>
                     <div className='flex justify-center items-center gap-5 select-none'>
                     {
                         coding.map(platform=>(
